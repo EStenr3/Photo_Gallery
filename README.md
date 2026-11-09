@@ -1,4 +1,5 @@
 # Nature Photo Gallery Website
+Live demo: https://gnwtksf.pythonanywhere.com
 
 ## Overview
 This project is an online photo gallery showcasing a variety of photos taken outside. It features several static photo collections that can be accessed from the main navigation bar, as well as a search page where users can filter photos by state, category, and various other fields. The website runs on the Flask framework and uses a SQLite database to store photo names and metadata. It uses Bootstrap classes for page styling, along with some custom CSS. Javascript is used to lazy load images, provide hover animations, show a larger preview of each photo when the user clicks on it, and display search options relevant to the user-selected photo category.
