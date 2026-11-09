@@ -1,0 +1,94 @@
+{% extends "collection.html" %}
+
+{% block title %}
+    Search Photos
+{% endblock %}
+
+{% block javascript %}
+    <script src="/static/images.js"></script>
+    <script src="/static/search.js"></script>
+{% endblock %}
+
+{% block heading %}
+    Search
+{% endblock %}
+
+{% block search %}
+    <form action="/search" method="post">
+        <div class="pb-4">
+            <h3>State</h3>
+            <div class="form-check form-check-inline ps-0">
+                <input type="checkbox" class="btn-check" name="maine" id="maine_check">
+                <label for="maine_check" class="btn btn-outline-dark">Maine</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="btn-check" name="new_york" id="new_york_check">
+                <label for="new_york_check" class="btn btn-outline-dark">New York</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="btn-check" name="south_dakota" id="south_dakota_check">
+                <label for="south_dakota_check" class="btn btn-outline-dark">South Dakota</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="btn-check" name="wyoming" id="wyoming_check">
+                <label for="wyoming_check" class="btn btn-outline-dark">Wyoming</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="btn-check" name="arizona" id="arizona_check">
+                <label for="arizona_check" class="btn btn-outline-dark">Arizona</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="btn-check" name="utah" id="utah_check">
+                <label for="utah_check" class="btn btn-outline-dark">Utah</label>
+            </div>
+        </div>
+
+        <div class="pb-4">
+            <h3>Category</h3>
+            <select name="category" class="form-select w-auto" id="category_select">
+                <option value="default">--Select--</option>
+                <option value="landscape">Landscapes</option>
+                <option value="flower">Flowers</option>
+                <option value="bird">Birds</option>
+                <option value="animal">Animals</option>
+            </select>
+        </div>
+
+        <div class="pb-4 d-none" id="filters">
+            <h3>Filters</h3>
+            <div class="input-group w-25 mb-3">
+                <span class="input-group-text bg-light text-body" id="type_lbl">Type</span>
+                <input type="text" class="form-control border border-1 border-tertiary" name="type" id="type_inp">
+            </div>
+            <div class="input-group w-25" id="color">
+                <span class="input-group-text bg-light text-body" id="color_lbl">Color</span>
+                <input type="text" class="form-control border border-1 border-tertiary" name="color" id="color_inp">
+            </div>
+        </div>
+
+        <div class="pb-4 d-none" id="features">
+            <h3>Features</h3>
+            <div class="form-check form-check-inline ps-0">
+                <input type="checkbox" class="btn-check" name="mountains" id="mountain_check">
+                <label for="mountain_check" class="btn btn-outline-dark">Mountains</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="btn-check" name="forest" id="forest_check">
+                <label for="forest_check" class="btn btn-outline-dark">Forest</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="btn-check" name="water" id="water_check">
+                <label for="water_check" class="btn btn-outline-dark">Water</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="btn-check" name="rocks" id="rock_check">
+                <label for="rock_check" class="btn btn-outline-dark">Rock Formations</label>
+            </div>
+        </div>
+
+        <div class="py-4 text-center">
+            <!-- Referred to https://icons.getbootstrap.com/icons/search/ for Bootstrap icon mark-up -->
+            <button type="submit" class="btn btn-dark px-3 py-2 mb-5 fs-4">Search &nbsp;<i class="bi bi-search"></i></button>
+        </div>
+    </form>
+{% endblock %}

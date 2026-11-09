@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+body {
+    background-image: linear-gradient(to bottom, #cdcdcd 2%, #dadada 35%, #e4e4e4 48%, #e4e4e4 52%, #dadada 65%, #cdcdcd 98%);
+    background-size: auto 400px;
+    background-repeat: repeat-y;
+    margin: 0;
+}
+
+a {
+    font-weight: 500!important;
+}
+
+#preview {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#bg_cover {
+    background-color: rgba(0,0,0,0.6);
+    overflow: hidden;
+}
+
+button:hover .red {
+    color: #ff0000;
+}
+
+button:hover .yellow {
+    color: #ffff00;
+}
+
+button:hover .orange {
+    color: #ff9900;
+}
+
+button:hover .green {
+    color: #00ff00;
+}
+
+button:hover .blue {
+    color: #3333ff;
+}
+
+button:hover .purple {
+    color: #ff00bf;
+}
